@@ -15,4 +15,4 @@ jobs:
       - name: Print Current Date and Time
         run: date
       - name: Print Directory Content
-        run: ls
+        run: ls -la
