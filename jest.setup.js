@@ -1,5 +1,5 @@
 import { TextEncoder, TextDecoder } from 'util'
 
-/* eslint-env node */
+/* global describe, it -- Globals defined by Jest */
 global.TextEncoder = TextEncoder
 global.TextDecoder = TextDecoder
