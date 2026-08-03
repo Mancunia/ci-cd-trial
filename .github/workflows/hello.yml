@@ -1,5 +1,5 @@
 name:'Hello_world'
-job:
+jobs:
   hello_world_job:
     runs-on: ubuntu-latest
     steps:
