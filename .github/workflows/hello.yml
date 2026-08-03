@@ -14,3 +14,5 @@ jobs:
         run: echo "Hello, World!"
       - name: Print Current Date and Time
         run: date
+      - name: Print Directory Content
+        run: ls -la
