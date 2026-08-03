@@ -1,4 +1,5 @@
-name:Hello_world
+name: Hello_world
+
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
