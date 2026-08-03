@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  Lint:
+  Checks:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -23,3 +23,5 @@ jobs:
         run: npm run eslint #this command runs the linter defined in your package.json file
       - name: Run tests
         run: npm run test #this command runs the tests defined in your package.json file
+      - name: Run end-to-end tests
+        run: npm run test:e2e #this command runs the end-to-end tests defined in your package.json file
