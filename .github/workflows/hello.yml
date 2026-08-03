@@ -3,7 +3,8 @@ name: Hello_world
 on:
   push:
     branches:
-      - main dev
+      - main
+      - dev
 
 jobs:
   hello_world_job:
@@ -11,3 +12,5 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo "Hello, World!"
+      - name: Print Current Date and Time
+        run: date
