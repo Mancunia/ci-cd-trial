@@ -1,14 +1,14 @@
-import {defineConfig} from '@playwright/test';
+import { defineConfig } from '@playwright/test'
 
 export default defineConfig({
-    testDir: './playwright',
+  testDir: './playwright',
   webServer: {
     command: 'npm run start -- --port 3000',
     url: 'http://localhost:3000',
     timeout: 120 * 1000,
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false,
   },
   use: {
     baseURL: 'http://localhost:3000/',
   },
-});
+})

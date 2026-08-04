@@ -37,6 +37,30 @@ module.exports = [
     }
   },
   {
+    files: ['playwright.config.js', 'playwright/**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2018,
+      sourceType: 'module',
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+        ...globals.es6,
+        ...globals.playwright
+      }
+    },
+    rules: {
+      'indent': ['error', 2],
+      'linebreak-style': ['error', 'unix'],
+      'quotes': ['error', 'single'],
+      'semi': ['error', 'never'],
+      'eqeqeq': 'error',
+      'no-trailing-spaces': 'error',
+      'object-curly-spacing': ['error', 'always'],
+      'arrow-spacing': ['error', { 'before': true, 'after': true }],
+      'no-console': 0
+    }
+  },
+  {
     files: ['src/**/*.{js,jsx}', 'test/**/*.{js,jsx}','jest.setup.js'],
     plugins: {
       react,
@@ -54,7 +78,8 @@ module.exports = [
         ...globals.browser,
         ...globals.node,
         ...globals.es6,
-        ...globals.jest
+        ...globals.jest,
+        ...globals.playwright
       }
     },
     settings: {
